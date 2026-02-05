@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+}
+
+.base {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topheader {
+  user-select: none;
+  font-size: 3rem;
+  color: wheat;
+}
+
+.viewcomp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgb(11, 29, 51), rgb(16, 38, 66));
+}
+
+.textbar {
+  width: 90vh;
+  height: 54vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#textshit {
+  font-size: 1.5rem;
+  padding: 1%;
+  border-radius: 2%;
+  resize: none;
+  outline: none;
+  border: none;
+  height: 100%;
+  scrollbar-color: rgb(50, 74, 102) rgba(0, 0, 255, 0);
+  scrollbar-width: thin;
+  scrollbar-face-color: wheat;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+   rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.icons {
+  width: 75vh;
+  border-radius: 1.5rem;
+  padding: 2%;
+  height: 6vh;
+  position: absolute;
+  top: 78vh;
+  background-color: wheat;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
