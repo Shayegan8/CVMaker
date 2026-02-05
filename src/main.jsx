@@ -3,9 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Base from './Base.jsx'
 import ViewComp from './ViewComp.jsx'
-import TextBar from './TextBar.jsx'
-import Icons from './Icons.jsx'
 import TopHeader from './TopHeader.jsx'
+import EditorComp from './EditorComp.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -14,8 +13,7 @@ createRoot(document.getElementById('root')).render(
         <Base>
           <ViewComp>
             <TopHeader value={"CV Application"} />
-            <TextBar />
-            <Icons />
+            <EditorComp />
           </ViewComp>
         </Base>
       } />

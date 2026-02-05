@@ -1,8 +1,17 @@
-import {setCover} from "./TextBar"
+export default function Icons({ editor }) {
+    if (!editor) return null
 
-export default function Icons() {
-    return (
+    return (<>
         <div className="icons">
+            <ul>
+                <li id="bold" onClick={() => editor.chain().focus().toggleBold().run()}>
+                    B
+                </li>
+                <li id="italic" onClick={() => editor.chain().focus().toggleItalic().run()}>
+                    I
+                </li>
+            </ul>
         </div>
+    </>
     )
 }

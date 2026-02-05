@@ -26,21 +26,25 @@ body {
   background-image: linear-gradient(to bottom, rgb(11, 29, 51), rgb(16, 38, 66));
 }
 
+.topheader {
+  margin-bottom: 1%;
+}
+
 .textbar {
   width: 90vh;
-  height: 54vh;
+  height: 64vh;
   display: flex;
   flex-direction: column;
 }
 
 #textshit {
+  background-color: white;
   font-size: 1.5rem;
   padding: 1%;
   border-radius: 2%;
   resize: none;
   outline: none;
   border: none;
-  height: 100%;
   scrollbar-color: rgb(50, 74, 102) rgba(0, 0, 255, 0);
   scrollbar-width: thin;
   scrollbar-face-color: wheat;
@@ -49,11 +53,17 @@ body {
    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
+.icons ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
 .icons {
   width: 75vh;
   border-radius: 1.5rem;
   padding: 2%;
-  height: 6vh;
+  height: 8vh;
   position: absolute;
   top: 78vh;
   background-color: wheat;
