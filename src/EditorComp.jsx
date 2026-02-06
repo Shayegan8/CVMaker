@@ -14,7 +14,14 @@ export default function EditorComp() {
             alignments: ['left', 'center', 'right'],
             defaultAlignment: ['left']
         }), Placeholder.configure({
-            placeholder: 'Write your CV ;)...'
+            placeholder: ({ node, pos }) => {
+                if (node.type.name === 'paragraph' && pos === 0)
+                    return 'Write your CV...'
+                return ''
+            },
+            emptyNodeClass: 'emptyclass',
+            includeChildren: false,
+            showOnlyWhenEditable: true
         })],
         content: ""
     })

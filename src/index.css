@@ -131,6 +131,17 @@ body {
   text-decoration: none;
 }
 
+.emptyclass::before {
+  content: attr(data-placeholder);
+  color: #aaa;
+  position: absolute;
+}
+
+.ProseMirror p:first-child[style*="text-align: center"]::before,
+.ProseMirror p:first-child[style*="text-align: right"]::before {
+  content: none;
+}
+
 .github>a {
   text-decoration: none;
   color: white;
