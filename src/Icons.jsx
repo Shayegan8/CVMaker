@@ -2,6 +2,7 @@ import dompurify from 'dompurify'
 import Left from './assets/left.svg?react'
 import Middle from './assets/middle.svg?react'
 import Right from './assets/right.svg?react'
+import html2pdf from 'html2pdf.js'
 
 export default function Icons({ editor }) {
     if (!editor) return null
@@ -39,6 +40,9 @@ export default function Icons({ editor }) {
                     <Right id="right" onClick={() => editor.chain().focus().setTextAlign('right').run()} />
                 </li>
             </ul>
+            <div className="submit" onClick={() => { html2pdf.set(options).from(sanitizedText).save() }}>
+                <div>Submit</div>
+            </div>
         </div>
     </>
     )
