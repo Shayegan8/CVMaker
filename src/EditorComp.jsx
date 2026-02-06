@@ -5,6 +5,7 @@ import { TextStyle } from "@tiptap/extension-text-style"
 import { FontFamily } from "@tiptap/extension-text-style"
 import FontSize from "tiptap-extension-font-size"
 import TextAlign from "@tiptap/extension-text-align"
+import Placeholder from "@tiptap/extension-placeholder"
 
 export default function EditorComp() {
     const editor = useEditor({
@@ -12,6 +13,8 @@ export default function EditorComp() {
             types: ['heading', 'paragraph'],
             alignments: ['left', 'center', 'right'],
             defaultAlignment: ['left']
+        }), Placeholder.configure({
+            placeholder: 'Write your CV ;)...'
         })],
         content: ""
     })
