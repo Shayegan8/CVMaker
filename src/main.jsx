@@ -12,13 +12,13 @@ createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path='/' element={
         <>
-          <Github value="Github" />
           <Base>
             <ViewComp>
               <TopHeader value={"CV Application"} />
               <EditorComp />
             </ViewComp>
           </Base>
+          <Github value="Github" />
         </>
       } />
     </Routes>
