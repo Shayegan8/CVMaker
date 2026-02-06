@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .topheader {
@@ -74,6 +75,14 @@ body {
   transition: transform 0.3s ease;
 }
 
+.icons>ul>li:nth-child(1) {
+  margin-top: 1%;
+}
+
+.icons>ul>li:nth-child(2) {
+  margin-top: 1%;
+}
+
 .submit {
   display: flex;
   align-items: center;
@@ -102,6 +111,48 @@ body {
   margin-top: 10%;
   width: 5vh;
   height: 5vh;
+}
+
+.github {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 73px;
+  font-size: 1.2rem;
+  user-select: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(57, 148, 29);
+  border-radius: 0 0 0 10%;
+  text-decoration: none;
+}
+
+.github>a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github>a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.github>a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.github>a:hover {
+  color: white;
+  text-decoration: none;
+
 }
 
 #middle {

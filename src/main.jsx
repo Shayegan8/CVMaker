@@ -5,17 +5,21 @@ import Base from './Base.jsx'
 import ViewComp from './ViewComp.jsx'
 import TopHeader from './TopHeader.jsx'
 import EditorComp from './EditorComp.jsx'
+import Github from './Github.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={
-        <Base>
-          <ViewComp>
-            <TopHeader value={"CV Application"} />
-            <EditorComp />
-          </ViewComp>
-        </Base>
+        <>
+          <Github value="Github" />
+          <Base>
+            <ViewComp>
+              <TopHeader value={"CV Application"} />
+              <EditorComp />
+            </ViewComp>
+          </Base>
+        </>
       } />
     </Routes>
   </BrowserRouter>,

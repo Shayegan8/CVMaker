@@ -17,10 +17,11 @@ export default function Icons({ editor }) {
         const options = {
             margin: 10,
             filename: 'cv.pdf',
-            html2canvas: { scale: 2 },
+            html2canvas: { scale: 5 },
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         }
-        html2pdf().set(options).from(sanitizedText).save()
+        const fonted = `<div style="font-family: 'Roboto Condensed', sans-serif;" />`
+        html2pdf().set(options).from(fonted + sanitizedText).save()
     }
 
     return (<>
