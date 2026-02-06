@@ -7,18 +7,20 @@ import html2pdf from 'html2pdf.js'
 export default function Icons({ editor }) {
     if (!editor) return null
 
-    const sanitizedText = dompurify.sanitize(editor.getHTML(), {
-        ALLOWED_TAGS: ['b', 'i', 'u', 's', 'p', 'br', 'div', 'span'],
-        ALLOWED_ATTR: ['style'],
-        FORCE_BODY: [true]
-    })
+    const convert2Pdf = () => {
+        const sanitizedText = dompurify.sanitize(editor.getHTML(), {
+            ALLOWED_TAGS: ['b', 'i', 'u', 's', 'p', 'br', 'div', 'span', 'strong', 'em', 'strike', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+            ALLOWED_ATTR: ['style'],
+            FORCE_BODY: [true]
+        })
 
-    const options = {
-        margin: 10,
-        filename: 'cv.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 }, // Higher scale = better quality
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        const options = {
+            margin: 10,
+            filename: 'cv.pdf',
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        }
+        html2pdf().set(options).from(sanitizedText).save()
     }
 
     return (<>
@@ -40,7 +42,7 @@ export default function Icons({ editor }) {
                     <Right id="right" onClick={() => editor.chain().focus().setTextAlign('right').run()} />
                 </li>
             </ul>
-            <div className="submit" onClick={() => { html2pdf.set(options).from(sanitizedText).save() }}>
+            <div className="submit" onClick={() => convert2Pdf()}>
                 <div>Submit</div>
             </div>
         </div>
