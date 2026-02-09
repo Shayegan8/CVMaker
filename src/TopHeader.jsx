@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export default function TopHeader({ value }) {
     const [content, setContent] = useState(null)
-    useEffect(() => {
-        if (window.innerWidth < 616) {
-            setContent(<div className="topheader-small">
+    if (window.innerWidth < 616) {
+        setContent(<div className="topheader-small">
+            {value}
+        </div >)
+    } else
+        setContent(
+            <div className="topheader">
                 {value}
-            </div >)
-        } else
-            setContent(
-                <div className="topheader">
-                    {value}
-                </div >
-            )
-    })
+            </div >
+        )
     return content
 }
