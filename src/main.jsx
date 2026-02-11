@@ -6,21 +6,24 @@ import ViewComp from './ViewComp.jsx'
 import TopHeader from './TopHeader.jsx'
 import EditorComp from './EditorComp.jsx'
 import Github from './Github.jsx'
+import { StrictMode } from 'react'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={
-        <>
-          <Base>
-            <ViewComp>
-              <TopHeader value={"CV Application"} />
-              <EditorComp />
-            </ViewComp>
-          </Base>
-          <Github value="Github" />
-        </>
-      } />
-    </Routes>
-  </BrowserRouter>,
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={
+          <>
+            <Base>
+              <ViewComp>
+                <TopHeader value={"CV Application"} />
+                <EditorComp />
+              </ViewComp>
+            </Base>
+            <Github value="Github" />
+          </>
+        } />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>,
 )
